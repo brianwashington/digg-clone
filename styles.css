@@ -12,7 +12,6 @@ body {
 ul {
   list-style-type: none;
   display: flex;
-  /*   justify-content: space-between; */
   align-items: center;
   padding: 10px;
 }
@@ -42,7 +41,6 @@ li a {
 .item {
   flex: 1 1;
   min-width: 105px;
-  /*   border: 1px solid black; */
   text-align: center;
 }
 
@@ -52,9 +50,47 @@ li a {
 }
 
 .search {
+  min-width: 110px;
+}
+
+.search a {
   flex: 1.5 5;
-  min-width: 100px;
+  min-width: 110px;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
   text-align: right;
+  background: white;
+  padding: 10px 20px 10px 5px;
+}
+
+.input {
+  position: absolute;
+  z-index: -1;
+  width: 0px;
+  background: white;
+  border: none;
+  padding: 10px;
+  bottom: 12px;
+  height: 45px;
+  right: 210px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.hide {
+  width: 0px;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.show {
+  width: 130px;
+  z-index: 1;
+  transition: width 0.3s;
+  background: lightgrey;
 }
 
 .sign-in,
@@ -203,7 +239,6 @@ a.underline {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
   margin-bottom: 0;
   padding-bottom: 0;
-  /* transition: all 1s; */
   transition-property: border-bottom;
   transition-duration: 0.3s;
 }
@@ -225,18 +260,15 @@ a.underline:hover {
 .top-article .left {
   flex-basis: 65%;
   text-align: center;
-  /* border: 1px solid green; */
   text-align: right;
 }
 
 .top-article .right {
   flex-basis: 35%;
   padding: 0 15px;
-  /* border: 1px solid green; */
 }
 
 .footer {
-  /* display: none; */
   visibility: hidden;
   position: fixed;
   bottom: 0;
@@ -258,9 +290,6 @@ a.underline:hover {
   }
 
   .secondary-nav-wrapper {
-    /* position: absolute;
-    left: 10%; */
-    /* position: relative; */
     margin: inherit auto;
     white-space: nowrap;
   }
@@ -363,6 +392,10 @@ a.underline:hover {
     visibility: visible;
     z-index: 1;
     opacity: 1;
+  }
+
+  .input {
+    display: none;
   }
 }
 
