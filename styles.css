@@ -40,7 +40,7 @@ li a {
 
 .item {
   flex: 1 1;
-  min-width: 105px;
+  min-width: 115px;
   text-align: center;
 }
 
@@ -87,7 +87,7 @@ li a {
 }
 
 .show {
-  width: 130px;
+  width: 150px;
   z-index: 1;
   transition: width 0.3s;
   background: lightgrey;
@@ -120,8 +120,9 @@ ul li {
   color: black;
 }
 
-.active a,
-a:not(.sign-in-link):hover {
+.active,
+a:not(.sign-in-link):hover,
+li:hover:not(.logo):not(.sign-in):not(.sign-in-small) {
   color: #005be2;
   border-color: #005be2;
 }
@@ -235,6 +236,10 @@ a {
   margin-bottom: 10px;
 }
 
+.social-icons a {
+  margin-right: 10px;
+}
+
 a.underline {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
   margin-bottom: 0;
@@ -339,6 +344,10 @@ a.underline:hover {
 
   .article-content {
     margin-left: 10px;
+  }
+
+  .input {
+    max-width: 110px;
   }
 }
 
