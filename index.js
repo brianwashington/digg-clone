@@ -3,6 +3,8 @@ const search = document.querySelector(".search");
 const input = document.querySelector(".input");
 const link = search.querySelector("a");
 
+setInputPos();
+
 window.addEventListener("resize", e => {
   setInputPos();
 });
